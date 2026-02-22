@@ -1,15 +1,47 @@
-
 body {
     text-align: center;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("./imgs/vj1bl0wpasse1.png");    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed  
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #000
 }
 
+/* Simulate the infinte loop  */
 
 
+.mh-bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    display: flex;
+}
+
+.mh-bg-scroll {
+    min-width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("./imgs/vj1bl0wpasse1.png");
+    background-size: cover;
+    background-position: center;
+    animation: mh-loop 30s linear infinite;
+}
+
+/* keyframes to make the loop happen */
+@keyframes mh-loop {
+ from {
+     transform: translateX(0); 
+
+ }
+
+ to {
+ transform: translateX(-100%); 
+
+
+ }
+}
+    
 /* Nav Bar section start */
 .nav-bar {
     background-color: #1a1a1a;
@@ -19,7 +51,7 @@ body {
     border-bottom: 3px solid goldenrod;
 }
 
-.nav-link  {
+.nav-link {
     display: flex;
     gap: 20px;
     color: #f0ead6;
@@ -30,7 +62,7 @@ a {
     color: #f0ead6;
     text-decoration: none;
     transition: 0.3s ease-in-out;
-    
+
 }
 
 
@@ -41,14 +73,12 @@ a:hover {
     scale: 1.1;
     transform: translateY(-3px);
     text-shadow: 0 0 10px aquamarine
-    
-    
 }
 
 .logo-navbar {
     max-height: 50px;
     max-width: auto;
-    
+
 }
 
 /* Nav Bar section end */
@@ -58,25 +88,22 @@ a:hover {
 
 
 /* Hero section start */
-.hero {
+.hero{
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 500px;
-    
+    padding-top: 80px;
 }
 
 .hero-title {
-        color: #f0ead6;
+    color: #f0ead6;
 
 
 }
 
 .hero-text {
-           color: #f0ead6;
+    color: #f0ead6;
 }
 
 h4 {
@@ -90,7 +117,7 @@ h4 {
     transition: 0.3s ease-in-out;
     background-color: #1a1a1a;
     background: none;
-    
+
 }
 
 
@@ -101,8 +128,6 @@ h4 {
     scale: 1.1;
     transform: translateY(-3px);
     text-shadow: 0 0 10px aquamarine
-    
-
 }
 
 
@@ -158,22 +183,16 @@ h2 {
     width: 150px;
     height: auto;
 }
-
+/* monster ends */
 
 /* info box */
 
 
 button {
 
-    border-radius:20rem ;
+    border-radius: 20rem;
     padding: 12px;
     border: none;
     background: #4a4444;
     color: white;
 }
-
-
-
-
-
-
